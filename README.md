@@ -56,11 +56,21 @@ The following code demonstrates how I created a SQL query to filter for employee
 <br/>
 <img src="https://i.imgur.com/4yp1tU8.png" height="80%" width="80%" alt=/>
 <br />
-The first two lines of the screenshot display the commands I entered, and the other lines display the output of the second command. I previously determined that the group had execute permissions, so I used the <i>chmod</i> command to remove them. The <i>researcher2</i> user already had execute permissions, so they did not need to be added.
+The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all employees in the Finance and Sales departments. First, I started by selecting all data from the <i>employees</i> table. Then, I used a <i>WHERE</i> clause with <i>OR</i> to filter for employees who are in the Finance and Sales departments. I used the <i>OR</i> operator instead of <i>AND</i> because I want all employees who are in either department. The first condition is <i>department = 'Finance'</i>, which filters for employees from the Finance department. The second condition is <i>department = 'Sales'</i>, which filters for employees from the Sales department.
  <br />
  <br />
-<b>Summary:</b>  <br/>
-I changed multiple permissions to match the level of authorization the organization wanted for files and directories in the <i>projects</i> directory. The first step in this was using <i>ls -la</i> to check the permissions for the directory. This informed my decisions in the following steps. I then used the <i>chmod</i> command multiple times to change the permissions on files and directories.<br />
+<b>Retrieve all employees not in IT:</b>  
+<br/>
+My team needs to make one more security update on employees who are not in the Information Technology department. To make the update, I first have to get information on these employees.<br/>
+<br/>
+The following demonstrates how I created a SQL query to filter for employee machines from employees not in the  Information Technology department.<br/>
+<br/>
+<img src="https://i.imgur.com/2Q04Rvv.png" height="80%" width="80%" alt=/>
+<br />
+The first part of the screenshot is my query, and the second part is a portion of the output. The query returns all employees not in the Information Technology department. First, I started by selecting all data from the <i>employees</i> table. Then, I used a <i>WHERE</i> clause with <i>NOT</i> to filter for employees not in this department.<br/>
+ <br/>
+ <b>Summary:</b>  <br/>
+I applied filters to SQL queries to get specific information on login attempts and employee machines. I used two different tables, <i>log_in_attempts</i> and <i>employees</i>. I used the <i>AND</i>, <i>OR</i>, and <i>NOT</i> operators to filter for the specific information needed for each task. I also used <i>LIKE</i> and the percentage sign (%) wildcard to filter for patterns.<br />
 </p>
 
 <!--
